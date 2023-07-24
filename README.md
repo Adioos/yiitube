@@ -2,8 +2,6 @@
 ```shell
 docker-compose up
 
-docker-compose exec php-fpm composer install || or update
-
 ```
 
 В файл host прописать:
