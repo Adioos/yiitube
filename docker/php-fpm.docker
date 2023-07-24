@@ -1,0 +1,4 @@
+FROM php:8.0-fpm
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+
+RUN install-php-extensions gd intl sqlite3 pdo_mysql xdebug @composer
