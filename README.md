@@ -2,7 +2,15 @@
 ```shell
 docker-compose up
 
+docker-compose exec php-fpm composer install
+
+docker-compose exec php-fpm php yii migrate/up --interactive=0
 ```
+
+Зайти в бд 
+Сервер:	mysql
+Имя: пользователя app
+Пароль: secret
 
 В файл host прописать:
 127.0.0.1 backend.test
